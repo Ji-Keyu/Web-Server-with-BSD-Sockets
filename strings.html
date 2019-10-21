@@ -1,0 +1,107 @@
+<!-- MHonArc v2.6.10 -->
+<!--X-Subject: Re: string.h vs strings.h -->
+<!--X-From-R13: "Yheg R. Lrvyratn" <YhegNAcraZROB.bet> -->
+<!--X-Date: Tue, 23 Jul 2002 19:43:58 GMT	(envelope&#45;from owner&#45;openldap&#45;devel@OpenLDAP.org) -->
+<!--X-Message-Id: 5.1.0.14.0.20020723121952.031c2948@127.0.0.1 -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: NMEFLNHODBAOPDKNNJALMEPADFAA.hyc@highlandsun.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML//EN">
+<html>
+<head>
+<title>Re: string.h vs strings.h</title>
+<link rev="made" href="mailto:Kurt@OpenLDAP.org">
+</head>
+<body bgcolor="white">
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<hr>
+[<a href="msg00068.html">Date Prev</a>][<a href="msg00070.html">Date Next</a>]
+<a href="index.html#00069">[Chronological]</a>
+<a href="threads.html#00069">[Thread]</a>
+<a href="/lists/openldap-devel">[Top]</a>
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: string.h vs strings.h</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>&quot;Howard Chu&quot; &lt;<a href="mailto:hyc%40highlandsun.com">hyc@highlandsun.com</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: string.h vs strings.h</strong></li>
+<li><strong>From</strong>: <strong>&quot;Kurt D. Zeilenga&quot; &lt;<a href="mailto:Kurt%40OpenLDAP.org">Kurt@OpenLDAP.org</a>&gt;</strong></li>
+<li>Date: Tue, 23 Jul 2002 12:22:57 -0700</li>
+<li>Cc: &lt;<a href="mailto:openldap-devel%40OpenLDAP.org">openldap-devel@OpenLDAP.org</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00068.html">NMEFLNHODBAOPDKNNJALMEPADFAA.hyc@highlandsun.com</a>&gt;</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre>At 11:44 AM 2002-07-23, Howard Chu wrote:
+&gt;Currently in &lt;ac/string.h&gt; we include either &lt;string.h&gt; or &lt;strings.h&gt;
+&gt;(there's an
+&gt;#if/#elif to select these). I've run into a platform that has both, and I
+&gt;need to
+&gt;include both to get a full set of declarations for the string functions.
+&gt;
+&gt;Does anyone know of any platforms that provide both string.h and strings.h
+&gt;where a conflict would be caused by including both?
+
+Such platforms do exist... but I don't recall which...
+nor do have any basis for determining whether or not
+OpenLDAP is used on such platforms.
+
+The problems usually are slight differences in function
+prototypes, etc., which cause compilation warnings
+and/or errors.
+
+It might be appropriate to design a configure test to
+determine if both are needed.
+
+Kurt
+
+
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00070" href="msg00070.html">RE: string.h vs strings.h</a></strong>
+<ul><li><em>From:</em> &quot;Howard Chu&quot; &lt;hyc@highlandsun.com&gt;</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00068" href="msg00068.html">string.h vs strings.h</a></strong>
+<ul><li><em>From:</em> &quot;Howard Chu&quot; &lt;hyc@highlandsun.com&gt;</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<ul>
+<li>Prev by Date:
+<strong><a href="msg00068.html">string.h vs strings.h</a></strong>
+</li>
+
+<li>Next by Date:
+<strong><a href="msg00070.html">RE: string.h vs strings.h</a></strong>
+</li>
+
+<li>Index(es):
+<ul>
+<li><a href="index.html#00069"><strong>Chronological</Strong></a></li>
+<li><a href="threads.html#00069"><strong>Thread</strong></a></li>
+
+<!--X-BotPNI-End-->
+<!--X-User-Footer-->
+<!--X-User-Footer-End-->
+</body>
+</html>
