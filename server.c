@@ -30,14 +30,8 @@ void process(int sockfd)
 	}
 	write(1, buf, 1024);
 
-
-	/* Check valid request */
-	if (buf[0] != 'G' || buf[1] != 'E' || buf[2] != 'T')
-	{
-		perror("ERROR invalid request");
-		exit(1);
-	}
 	int type = -1;
+	int version = -1;
 
 	/* Get file name */
 	char fileName[256];
@@ -63,6 +57,7 @@ void process(int sockfd)
         close(sockfd);
         return;
     }
+
 	/* Get file type */
 	int hasType = 0;
 	int k = 0;
@@ -91,6 +86,8 @@ void process(int sockfd)
 	else if (strncmp(&fileType[0], "gif", 3) == 0)
 		type = 4;
 
+
+	/* Search the requested file */
 	DIR *Dir;
     struct dirent *DirEnt;
     Dir = opendir(".");  /* any suitable directory name  */
@@ -128,9 +125,6 @@ void process(int sockfd)
 	struct stat fileInfo;
 	stat(fileName, &fileInfo);
 	int fileLength = fileInfo.st_size;
-
-
-
 
 
 	/* Write a response to the client */
@@ -184,9 +178,6 @@ void process(int sockfd)
 	
 	
 	/* Send file contents */
-	//int input_file = fileno(fd);
-	//char *filename = "large.JPG";
-	// int input_file = open(filename, O_RDONLY);
 	int input_file = fileno(fd);
 	while (1) // use to send file
 	{

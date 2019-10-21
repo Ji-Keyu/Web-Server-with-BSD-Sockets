@@ -1,2 +1,21 @@
-Keyu Ji 704966744
-Huiming Wang
+NAME: Keyu Ji
+UID: 704966744
+NAME: Hermmy Wang 
+UID: 704978214
+
+CS 118 Spring 2019 Project 1
+Web Server Implementation using BSD Sockets
+
+Files included:
+(1) webserver.c
+	Source code of the web server, written in C
+
+(2) Makefile
+	Compile the source code via '$ make'
+
+(3) report.pdf
+	Introduce the design of the web server and a brief instruction of how to 
+	compile and test the web server.
+
+(4) README.md
+	Include students' names and UIDs. 
